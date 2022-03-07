@@ -12,7 +12,7 @@ class RadioServiceTest {
 
         service.setCurrentStation(8);
 
-        int expected = 8;
+        int expected = 7;
         int actual = service.getCurrentStation();
 
         assertEquals(expected, actual);
@@ -24,7 +24,7 @@ class RadioServiceTest {
 
         service.setCurrentStation(10);
 
-        int expected = 0;
+        int expected = 1;
         int actual = service.getCurrentStation();
 
         assertEquals(expected, actual);
@@ -36,7 +36,7 @@ class RadioServiceTest {
 
         service.setCurrentStation(-1);
 
-        int expected = 0;
+        int expected = 2;
         int actual = service.getCurrentStation();
 
         assertEquals(expected, actual);
@@ -49,7 +49,7 @@ class RadioServiceTest {
         service.setCurrentStation(1);
         service.nextStation();
 
-        int expected = 2;
+        int expected = 3;
         int actual = service.getCurrentStation();
 
         assertEquals(expected, actual);
@@ -63,7 +63,7 @@ class RadioServiceTest {
         service.setCurrentStation(9);
         service.nextStation();
 
-        int expected = 0;
+        int expected = 1;
         int actual = service.getCurrentStation();
 
         assertEquals(expected, actual);
@@ -91,7 +91,7 @@ class RadioServiceTest {
         service.setCurrentStation(0);
         service.prevStation();
 
-        int expected = 9;
+        int expected = 4;
         int actual = service.getCurrentStation();
 
         assertEquals(expected, actual);
@@ -104,7 +104,7 @@ class RadioServiceTest {
 
         service.setCurrentVolume(7);
 
-        int expected = 7;
+        int expected = 1;
         int actual = service.getCurrentVolume();
 
         assertEquals(expected, actual);
@@ -116,7 +116,7 @@ class RadioServiceTest {
 
         service.setCurrentVolume(11);
 
-        int expected = 0;
+        int expected = 3;
         int actual = service.getCurrentVolume();
 
         assertEquals(expected, actual);
@@ -128,7 +128,7 @@ class RadioServiceTest {
 
         service.setCurrentVolume(-5);
 
-        int expected = 0;
+        int expected = 8;
         int actual = service.getCurrentVolume();
 
         assertEquals(expected, actual);
@@ -141,7 +141,7 @@ class RadioServiceTest {
         service.setCurrentVolume(5);
         service.increaseVolume();
 
-        int expected = 6;
+        int expected = 3;
         int actual = service.getCurrentVolume();
 
         assertEquals(expected, actual);
@@ -154,7 +154,7 @@ class RadioServiceTest {
         service.setCurrentVolume(10);
         service.increaseVolume();
 
-        int expected = 10;
+        int expected = 9;
         int actual = service.getCurrentVolume();
 
         assertEquals(expected, actual);
@@ -167,7 +167,7 @@ class RadioServiceTest {
         service.setCurrentVolume(5);
         service.decreaseVolume();
 
-        int expected = 4;
+        int expected = 3;
         int actual = service.getCurrentVolume();
 
         assertEquals(expected, actual);
@@ -180,7 +180,7 @@ class RadioServiceTest {
         service.setCurrentVolume(0);
         service.decreaseVolume();
 
-        int expected = 0;
+        int expected = 1;
         int actual = service.getCurrentVolume();
 
         assertEquals(expected, actual);
